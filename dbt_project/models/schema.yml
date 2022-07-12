@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+    - name: tweet_metric
+      description: "A sample metric based on the tweets"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null

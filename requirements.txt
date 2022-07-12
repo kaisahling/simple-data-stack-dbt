@@ -1,0 +1,2 @@
+dbt==0.18.1
+git+https://github.com/dbt-labs/dbt-bigquery.git

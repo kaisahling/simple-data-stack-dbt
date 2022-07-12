@@ -1,0 +1,39 @@
+
+version: 2
+
+models:
+    - name: stg_tweets
+      description: "Staging table for tweets"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: public_metrics
+              description: "Public metrics"
+              tests:
+                - not_null
+          - name: context_annotations
+              description: "Some description"
+              tests:
+                - not_null
+          - name: referenced_tweets
+              tests:
+                - not_null
+          - name: in_reply_to_user_id
+              tests:
+              description: "Some description"
+                - not_null
+          - name: author_id
+              tests:
+              description: "Some description"
+                - not_null
+          - name: text
+              tests:
+              description: "Some description"
+                - not_null
+          - name: created_at
+              tests:
+              description: "Some description"
+                - not_null

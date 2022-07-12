@@ -1,0 +1,25 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/simple-data-stack-dbt:latest', '.' ]
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'eu.gcr.io/$PROJECT_ID/simple-data-stack-dbt:latest' ]
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+    - 'run'
+    - 'deploy'
+    - 'ceq-dbt'
+    - '--image'
+    - 'eu.gcr.io/$PROJECT_ID/simple-data-stack-dbt:latest'
+    - '--region'
+    - 'europe-west3'
+    - '--platform'
+    - 'managed'
+    - '--memory'
+    - '1024Mi'
+    - '--service-account=$_SA'
+    - '--no-allow-unauthenticated'
+    - "--timeout=60m"
