@@ -11,7 +11,7 @@ steps:
   args:
     - 'run'
     - 'deploy'
-    - 'ceq-dbt'
+    - 'simple-data-stack-dbt-service'
     - '--image'
     - 'eu.gcr.io/$PROJECT_ID/simple-data-stack-dbt:latest'
     - '--region'
@@ -22,4 +22,4 @@ steps:
     - '1024Mi'
     - '--service-account=$_SA'
     - '--no-allow-unauthenticated'
-    - "--timeout=60m"
+    - '--timeout=10m'
