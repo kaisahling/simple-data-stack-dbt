@@ -1,10 +1,6 @@
 WITH source_data AS (
   SELECT
-    public_metrics,
-    context_annotations,
-    referenced_tweets,
-    in_reply_to_user_id,
-    author_id,
+    DISTINCT
     text,
     created_at,
     tweet_id
