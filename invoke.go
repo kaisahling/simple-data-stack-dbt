@@ -26,7 +26,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	log.Print("ceq-dbt: starting server...")
+	log.Print("simple-data-stack-dbt: starting server...")
 
 	http.HandleFunc("/", handler)
 
