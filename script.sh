@@ -1,2 +1,2 @@
 #!/bin/sh
-dbt run --profiles-dir ./profiles
+dbt run --profiles-dir ./profiles --target dev
