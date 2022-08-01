@@ -4,7 +4,7 @@ simpledatastackdbt:
     dev:
       type: bigquery
       method: oauth
-      project: kaisahlingtutorial
+      project: kaisahlingtutorials
       dataset: data_warehouse
       location: europe-west3
       threads: 1
