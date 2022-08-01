@@ -1,4 +1,4 @@
-ceq_transformation:
+simpledatastackdbt:
   target: dev
   outputs:
     dev:
