@@ -11,29 +11,30 @@ models:
                 - unique
                 - not_null
           - name: public_metrics
-              description: "Public metrics"
-              tests:
-                - not_null
+            description: "Public metrics"
+            tests:
+              - not_null
           - name: context_annotations
-              description: "Some description"
-              tests:
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
           - name: referenced_tweets
-              tests:
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
           - name: in_reply_to_user_id
-              tests:
-              description: "Some description"
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
           - name: author_id
-              tests:
-              description: "Some description"
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
           - name: text
-              tests:
-              description: "Some description"
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
           - name: created_at
-              tests:
-              description: "Some description"
-                - not_null
+            description: "Some description"
+            tests:
+              - not_null
