@@ -8,8 +8,7 @@ USER root
 WORKDIR /dbt
 COPY --from=builder /app/server ./
 COPY script.sh ./
-COPY script_prod.sh ./
-COPY ceq-dbt ./
+COPY dbt_project ./
 RUN dbt deps
 
 ENTRYPOINT "./server"
